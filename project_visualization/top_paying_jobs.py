@@ -19,7 +19,7 @@ df = pd.read_csv(DATA_PATH)
 # data preparation
 
 df[X_COLUMN] = df[X_COLUMN].astype(float)
-df = df.sort_values(by=X_COLUMN, ascending=True)
+df = df.sort_values(by=X_COLUMN, ascending=False)
 
 # format function for plot scale
 def dollars(x, pos):

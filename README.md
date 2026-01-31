@@ -53,5 +53,47 @@ ORDER BY
 LIMIT 10;
 ```
 
+Here's the breakdown of the top data science positions from 2023:
+- **Data Skewed:** The data is significantly skewed with one position far exceeding the rest.
+- **Senior:** The roles with the highest pay are more senior and leadership roles.
+- **Role Type:** Most of the highest paying roles are specialized, not just with the title of Data Scientist.
+
+![Top-Paying Roles](assets/top_paying_jobs.png)
+*Bar graph visualizing the top 10 salaries for Data Scientist roles.*
+
+### 2. Skills for Top Paying Data Analyst Jobs
+To understand what skills are required for these top-paying positions, I joined the job postings with the skills data. This highlighted what employers value for high-paying roles.
+
+```sql
+WITH top_paying_jobs AS (
+    SELECT
+        job_id,
+        job_title,
+        salary_year_avg,
+        name AS company_name
+    FROM
+        job_postings_fact
+    LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+    WHERE
+        job_title_short = 'Data Scientist' AND
+        job_location = 'Anywhere' AND
+        salary_year_avg IS NOT NULL
+    ORDER BY
+        salary_year_avg DESC
+    LIMIT 10
+)
+
+SELECT
+    top_paying_jobs.*,
+    skills
+FROM top_paying_jobs
+INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY
+    salary_year_avg DESC;
+```
+
+
+
 # What I Learned
 # Conclusions
