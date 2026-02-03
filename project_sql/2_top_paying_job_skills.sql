@@ -17,7 +17,6 @@ WITH top_paying_jobs AS (
     LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
     WHERE
         job_title_short = 'Data Scientist' AND
-        job_location = 'Anywhere' AND
         salary_year_avg IS NOT NULL
     ORDER BY
         salary_year_avg DESC
@@ -38,6 +37,41 @@ ORDER BY
 RESULTS JSON
 
 [
+  {
+    "job_id": 177779,
+    "job_title": "Data Scientist",
+    "salary_year_avg": "960000.0",
+    "company_name": "East River Electric Power Cooperative, Inc.",
+    "skills": "python"
+  },
+  {
+    "job_id": 177779,
+    "job_title": "Data Scientist",
+    "salary_year_avg": "960000.0",
+    "company_name": "East River Electric Power Cooperative, Inc.",
+    "skills": "java"
+  },
+  {
+    "job_id": 177779,
+    "job_title": "Data Scientist",
+    "salary_year_avg": "960000.0",
+    "company_name": "East River Electric Power Cooperative, Inc.",
+    "skills": "r"
+  },
+  {
+    "job_id": 177779,
+    "job_title": "Data Scientist",
+    "salary_year_avg": "960000.0",
+    "company_name": "East River Electric Power Cooperative, Inc.",
+    "skills": "c++"
+  },
+  {
+    "job_id": 551617,
+    "job_title": "Geographic Information Systems Analyst - GIS Analyst",
+    "salary_year_avg": "585000.0",
+    "company_name": "ReServe",
+    "skills": "excel"
+  },
   {
     "job_id": 40145,
     "job_title": "Staff Data Scientist/Quant Researcher",
@@ -60,186 +94,159 @@ RESULTS JSON
     "skills": "sql"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
+    "job_id": 1455311,
+    "job_title": "Data Scientist (L5) - Member Product",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
     "skills": "sql"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
+    "job_id": 1455311,
+    "job_title": "Data Scientist (L5) - Member Product",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
     "skills": "python"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
-    "skills": "java"
+    "job_id": 1455311,
+    "job_title": "Data Scientist (L5) - Member Product",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
+    "skills": "r"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
-    "skills": "cassandra"
+    "job_id": 1300865,
+    "job_title": "Data Scientist (L5) - Messaging",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
+    "skills": "sql"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
+    "job_id": 1300865,
+    "job_title": "Data Scientist (L5) - Messaging",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
+    "skills": "python"
+  },
+  {
+    "job_id": 1300865,
+    "job_title": "Data Scientist (L5) - Messaging",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
+    "skills": "r"
+  },
+  {
+    "job_id": 1300865,
+    "job_title": "Data Scientist (L5) - Messaging",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
     "skills": "spark"
   },
   {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
+    "job_id": 1300865,
+    "job_title": "Data Scientist (L5) - Messaging",
+    "salary_year_avg": "450000.0",
+    "company_name": "Netflix",
+    "skills": "excel"
+  },
+  {
+    "job_id": 727439,
+    "job_title": "Director Data Science",
     "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
-    "skills": "hadoop"
-  },
-  {
-    "job_id": 1131472,
-    "job_title": "Data Scientist",
-    "salary_year_avg": "375000.0",
-    "company_name": "Algo Capital Group",
-    "skills": "tableau"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "azure"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "aws"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "tensorflow"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "keras"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "pytorch"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "scikit-learn"
-  },
-  {
-    "job_id": 126218,
-    "job_title": "Director Level - Product Management - Data Science",
-    "salary_year_avg": "320000.0",
-    "company_name": "Teramind",
-    "skills": "datarobot"
-  },
-  {
-    "job_id": 457991,
-    "job_title": "Head of Battery Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Lawrence Harvey",
-    "skills": "python"
-  },
-  {
-    "job_id": 457991,
-    "job_title": "Head of Battery Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Lawrence Harvey",
-    "skills": "aws"
-  },
-  {
-    "job_id": 457991,
-    "job_title": "Head of Battery Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Lawrence Harvey",
-    "skills": "gcp"
-  },
-  {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
+    "company_name": "Blue Cross and Blue Shield of Minnesota",
     "skills": "sql"
   },
   {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
+    "job_id": 727439,
+    "job_title": "Director Data Science",
+    "salary_year_avg": "375000.0",
+    "company_name": "Blue Cross and Blue Shield of Minnesota",
     "skills": "python"
   },
   {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
-    "skills": "java"
+    "job_id": 727439,
+    "job_title": "Director Data Science",
+    "salary_year_avg": "375000.0",
+    "company_name": "Blue Cross and Blue Shield of Minnesota",
+    "skills": "r"
   },
   {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
-    "skills": "c"
-  },
-  {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
+    "job_id": 727439,
+    "job_title": "Director Data Science",
+    "salary_year_avg": "375000.0",
+    "company_name": "Blue Cross and Blue Shield of Minnesota",
     "skills": "aws"
   },
   {
-    "job_id": 38905,
-    "job_title": "Principal Data Scientist",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm5",
-    "skills": "gcp"
+    "job_id": 727439,
+    "job_title": "Director Data Science",
+    "salary_year_avg": "375000.0",
+    "company_name": "Blue Cross and Blue Shield of Minnesota",
+    "skills": "spark"
   },
   {
-    "job_id": 129924,
-    "job_title": "Director of Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm4",
+    "job_id": 1100370,
+    "job_title": "Data Science Director, Adoption & Enterprise",
+    "salary_year_avg": "375000.0",
+    "company_name": "Asana",
     "skills": "python"
   },
   {
-    "job_id": 129924,
-    "job_title": "Director of Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm4",
-    "skills": "pandas"
+    "job_id": 1100370,
+    "job_title": "Data Science Director, Adoption & Enterprise",
+    "salary_year_avg": "375000.0",
+    "company_name": "Asana",
+    "skills": "scala"
   },
   {
-    "job_id": 129924,
-    "job_title": "Director of Data Science",
-    "salary_year_avg": "300000.0",
-    "company_name": "Storm4",
-    "skills": "numpy"
+    "job_id": 1100370,
+    "job_title": "Data Science Director, Adoption & Enterprise",
+    "salary_year_avg": "375000.0",
+    "company_name": "Asana",
+    "skills": "r"
+  },
+  {
+    "job_id": 1100370,
+    "job_title": "Data Science Director, Adoption & Enterprise",
+    "salary_year_avg": "375000.0",
+    "company_name": "Asana",
+    "skills": "asana"
+  },
+  {
+    "job_id": 1284983,
+    "job_title": "Director Data Science, AI Infra",
+    "salary_year_avg": "375000.0",
+    "company_name": "Meta",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1284983,
+    "job_title": "Director Data Science, AI Infra",
+    "salary_year_avg": "375000.0",
+    "company_name": "Meta",
+    "skills": "python"
+  },
+  {
+    "job_id": 1284983,
+    "job_title": "Director Data Science, AI Infra",
+    "salary_year_avg": "375000.0",
+    "company_name": "Meta",
+    "skills": "r"
+  },
+  {
+    "job_id": 1284983,
+    "job_title": "Director Data Science, AI Infra",
+    "salary_year_avg": "375000.0",
+    "company_name": "Meta",
+    "skills": "sas"
+  },
+  {
+    "job_id": 1284983,
+    "job_title": "Director Data Science, AI Infra",
+    "salary_year_avg": "375000.0",
+    "company_name": "Meta",
+    "skills": "sas"
   }
 ]
+
 */
